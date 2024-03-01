@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome_header">Welcome</string>
+    <string name="welcome_description">A convient and comprehensive tool to enhance their travel experience.</string>
+    <string name="button_text_getstarted">Get Started</string>
+    <string name="usernamename_edittext">Username</string>
+    <string name="password_edittext">password</string>
+    <string name="forgotpassword">Forgot Password</string>
+    <string name="signin_text">Sign In</string>
+    <string name="sign_up_text">Sign Up</string>
+    <string name="first_name">First Name</string>
+    <string name="name">Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="address_text">Address</string>
+    <string name="city_text">City</string>
+    <string name="phoneTextView">Phone Number</string>
+    <string name="email_text">Email</string>
+    <string name="title_details">Details</string>
+    <string name="title_recommendation">Recommendation</string>
+    <string name="login_failed">Login Failed</string>
+</resources>

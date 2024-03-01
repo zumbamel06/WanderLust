@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Wanderlust Companion</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="version_number">Version 1.0</string>
+    <string name="welcome_header">Welcome</string>
+    <string name="welcome_description">A convient and comprehensive tool to enhance their travel experience.</string>
+    <string name="button_text_getstarted">Get Started</string>
+    <string name="usernamename_edittext">Username</string>
+    <string name="password_edittext">password</string>
+    <string name="forgotpassword">Forgot Password</string>
+    <string name="signin_text">Sign In</string>
+    <string name="sign_up_text">Sign Up</string>
+    <string name="first_name">First Name</string>
+    <string name="name">Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="address_text">Address</string>
+    <string name="city_text">City</string>
+    <string name="phoneTextView">Phone Number</string>
+    <string name="email_text">Email</string>
+    <string name="title_details">Details</string>
+    <string name="title_search_maps">Maps</string>
+    <string name="title_recommendation">Recommendation</string>
+    <string name="login_failed">Login Failed</string>
+    <string name="invalid_username">Invalid Username</string>
+    <string name="invalid_password">Invalid Password</string>
+    <string-array name="list_of_list">
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+        <item>Item 4</item>
+    </string-array>
+    <string-array name="content_of_list">
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit varius sapien aliquam pharetra. Proin vulputate, libero ut pretium dictum, lectus metus varius felis, blandit convallis nisl lectus sed erat. Suspendisse in pharetra dolor, in fermentum libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer hendrerit nunc velit, finibus rutrum elit aliquet a. Nam semper augue ut dignissim faucibus. Ut lorem odio, euismod in ultricies vitae, sodales et neque. Etiam sed posuere sem, non commodo enim. Etiam nunc arcu, scelerisque ac velit at, euismod lobortis augue. Nulla porttitor dictum nisl.</item>
+        <item>Mauris vitae sagittis dui, vel vestibulum erat. Nulla quis libero enim. In hac habitasse platea dictumst. Aliquam pharetra non tellus scelerisque fermentum. Cras tempor tincidunt sapien vitae aliquam. In vel mauris sed lorem malesuada porta id quis ante. Fusce vel diam semper, tristique elit quis, dapibus arcu.</item>
+        <item>Nulla et fringilla urna. Curabitur elementum tellus at mi porttitor mollis ut ut ex. Aenean vestibulum cursus libero, vel semper eros hendrerit imperdiet. Duis vitae bibendum dolor. Proin blandit posuere lacus, nec semper velit hendrerit congue. Nam convallis tincidunt eros. Ut semper odio lorem, sit amet cursus ligula ullamcorper at. Nulla mattis elementum lorem a semper. Vivamus tristique tortor vel sapien tincidunt, nec lacinia felis efficitur.</item>
+        <item>In sollicitudin lacus ac iaculis tristique. Ut efficitur nisl sem, sed porttitor felis pharetra ut. Sed dui eros, vulputate nec tempus sit amet, blandit a purus. Pellentesque nec velit sagittis, semper turpis vitae, malesuada eros. Morbi porttitor velit scelerisque nunc fringilla, ut auctor turpis aliquet. In hac habitasse platea dictumst. Donec arcu lectus, luctus eu neque ut, molestie faucibus purus.</item>
+    </string-array>
+</resources>
