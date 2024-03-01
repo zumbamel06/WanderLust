@@ -1,7 +1,10 @@
 package com.wanderlab.wanderlustcompanion
 
+
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -10,6 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.wanderlab.wanderlustcompanion.data.model.LoggedInUser
 import com.wanderlab.wanderlustcompanion.databinding.ActivityMainBinding
 import com.wanderlab.wanderlustcompanion.ui.home.HomeFragment
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,19 +39,17 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
         this.displayname = intent.getStringExtra("login_name")
+
         val dbHelper = DBHelper(this, "wanderlust.db", null, 1)
         val userInfo: LoggedInUser = dbHelper.user_Info(this.displayname.toString())
 
-        val bundle = Bundle()
-        bundle.putString("login_name", this.displayname)
-        bundle.putString("first_name", userInfo.nickName)
-        bundle.putString("last_name", userInfo.fullName)
-        bundle.putString("address", userInfo.gender)
-        bundle.putString("city", userInfo.dob)
-        bundle.putString("email", userInfo.email)
-        //val dbHelper = DBHelper(this, "wanderlust.db", null, 1)
-        //val userInfo: LoggedInUser = dbHelper.user_Info(this.displayname.toString())
-        val fragobj = HomeFragment()
-        fragobj.arguments = bundle
+        val fragmentTransaction: FragmentTransaction = supportFragmentManager.beginTransaction()
+
+        val fragment: HomeFragment = HomeFragment.newInstance(this.displayname.toString(),
+            userInfo.nickName,userInfo.fullName,userInfo.gender,userInfo.dob,userInfo.email)
+        fragmentTransaction.add(R.id.frament_home, fragment)
+
+        fragmentTransaction.commit()
+
     }
 }
