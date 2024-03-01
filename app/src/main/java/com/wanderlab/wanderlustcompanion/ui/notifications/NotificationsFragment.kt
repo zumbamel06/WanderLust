@@ -55,12 +55,19 @@ class NotificationsFragment : Fragment(), WanderListAdapter.ItemClickListener{
         }*/
         val titletext:TextView = binding.titleTextList
         titletext.text = "Recommendations"
+
+        return root
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         var myListData: MutableList<MyWAnderListData> = mutableListOf()
         val StringArray: Array<String> = resources.getStringArray(R.array.list_of_list)
         for (i in StringArray) {
             myListData.add(MyWAnderListData(i,R.drawable.ic_home_black_24dp))
         }
-        val recyclerView = root.findViewById(R.id.list_item_view_main) as RecyclerView
+
+        val recyclerView = view.findViewById(R.id.list_item_view_main) as RecyclerView
         val adapter = WanderListAdapter(myListData,this)
         adapter.refreshData(myListData)
         val horizontalLayoutManagaer =
@@ -69,7 +76,6 @@ class NotificationsFragment : Fragment(), WanderListAdapter.ItemClickListener{
         //adapter.notifyDataSetChanged()
         recyclerView.layoutManager = horizontalLayoutManagaer
         recyclerView.adapter = adapter
-        return root
     }
 
     override fun onDestroyView() {

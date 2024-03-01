@@ -21,7 +21,7 @@ class WanderListAdapter (private var listdata: MutableList<MyWAnderListData>, pr
         viewType: Int
     ): ViewHolder {
         val listItem = LayoutInflater.from(parent.context)
-            .inflate(R.layout.fragment_recommendation, parent, false)
+            .inflate(R.layout.recycler_view_item, parent, false)
         Log.v(TAG,listItem.toString())
         return ViewHolder(listItem)
     }
@@ -32,7 +32,7 @@ class WanderListAdapter (private var listdata: MutableList<MyWAnderListData>, pr
         holder.imageView.setImageResource(listdata[position].ImgId)
         holder.imageView.setOnClickListener {
             itemClickListener.onItemClick(position,listdata[position])
-            }
+        }
 
     }
 
