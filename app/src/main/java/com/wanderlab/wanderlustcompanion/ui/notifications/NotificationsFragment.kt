@@ -1,5 +1,6 @@
 package com.wanderlab.wanderlustcompanion.ui.notifications
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.wanderlab.wanderlustcompanion.ContentDisplay
 import com.wanderlab.wanderlustcompanion.R
 import com.wanderlab.wanderlustcompanion.WanderListAdapter
 import com.wanderlab.wanderlustcompanion.data.model.MyWAnderListData
@@ -24,15 +26,11 @@ class NotificationsFragment : Fragment(), WanderListAdapter.ItemClickListener{
     private val binding get() = _binding!!
     override fun onItemClick(position: Int, data:MyWAnderListData) {
         Toast.makeText(activity, "TEST: " + position, Toast.LENGTH_SHORT).show()
-        /*
-        val displayname = intent.getStringExtra("login_name")
-        val food_genere = intent.getStringExtra("food_genre")
-        val intent_pass = Intent(this, ContentDisplayActivity::class.java)
-        intent_pass.putExtra("login_name", displayname)
-        intent_pass.putExtra("food_genre", food_genere)
+
+        val intent_pass = Intent(activity, ContentDisplay::class.java)
         intent_pass.putExtra("position", position)
         intent_pass.putExtra("data", data.titleLine)
-        startActivity(intent_pass)*/
+        startActivity(intent_pass)
     }
 
     override fun onLongClick(position: Int, data: MyWAnderListData) {
